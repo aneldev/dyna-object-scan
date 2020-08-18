@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`dynaObjectScan Scan array 1`] = `
+Array [
+  Object {
+    "path": "[0]",
+    "value": "Apple",
+  },
+  Object {
+    "path": "[1]",
+    "value": "Banana",
+  },
+  Object {
+    "path": "[2]",
+    "value": Object {
+      "age": 32,
+      "name": "Lola",
+    },
+  },
+  Object {
+    "path": "[2].name",
+    "value": "Lola",
+  },
+  Object {
+    "path": "[2].age",
+    "value": 32,
+  },
+]
+`;
+
+exports[`dynaObjectScan Scan object and skip 1`] = `
+Array [
+  Object {
+    "path": ".fname",
+    "value": "John",
+  },
+  Object {
+    "path": ".lname",
+    "value": "Smith",
+  },
+  Object {
+    "path": ".age",
+    "value": 37,
+  },
+  Object {
+    "path": ".favoriteCars",
+    "value": Array [
+      "Honda",
+      "Porsche",
+    ],
+  },
+  Object {
+    "path": ".favoriteCars[0]",
+    "value": "Honda",
+  },
+  Object {
+    "path": ".favoriteCars[1]",
+    "value": "Porsche",
+  },
+]
+`;
+
+exports[`dynaObjectScan Scan object with nested objects 1`] = `
+Array [
+  Object {
+    "path": ".fname",
+    "value": "John",
+  },
+  Object {
+    "path": ".lname",
+    "value": "Smith",
+  },
+  Object {
+    "path": ".age",
+    "value": 37,
+  },
+  Object {
+    "path": ".favoriteSweets",
+    "value": Object {
+      "kiwi": "maybe",
+      "panCakes": true,
+      "strawberries": false,
+    },
+  },
+  Object {
+    "path": ".favoriteSweets.panCakes",
+    "value": true,
+  },
+  Object {
+    "path": ".favoriteSweets.strawberries",
+    "value": false,
+  },
+  Object {
+    "path": ".favoriteSweets.kiwi",
+    "value": "maybe",
+  },
+]
+`;
+
+exports[`dynaObjectScan Scan object with nested objects and arrays 1`] = `
+Array [
+  Object {
+    "path": ".fname",
+    "value": "John",
+  },
+  Object {
+    "path": ".lname",
+    "value": "Smith",
+  },
+  Object {
+    "path": ".age",
+    "value": 37,
+  },
+  Object {
+    "path": ".favoriteSweets",
+    "value": Object {
+      "kiwi": "maybe",
+      "panCakes": true,
+      "strawberries": false,
+    },
+  },
+  Object {
+    "path": ".favoriteSweets.panCakes",
+    "value": true,
+  },
+  Object {
+    "path": ".favoriteSweets.strawberries",
+    "value": false,
+  },
+  Object {
+    "path": ".favoriteSweets.kiwi",
+    "value": "maybe",
+  },
+  Object {
+    "path": ".favoriteCars",
+    "value": Array [
+      "Honda",
+      "Porsche",
+    ],
+  },
+  Object {
+    "path": ".favoriteCars[0]",
+    "value": "Honda",
+  },
+  Object {
+    "path": ".favoriteCars[1]",
+    "value": "Porsche",
+  },
+]
+`;
+
+exports[`dynaObjectScan Scan simple object 1`] = `
+Array [
+  Object {
+    "path": ".fname",
+    "value": "John",
+  },
+  Object {
+    "path": ".lname",
+    "value": "Smith",
+  },
+  Object {
+    "path": ".age",
+    "value": 37,
+  },
+]
+`;
