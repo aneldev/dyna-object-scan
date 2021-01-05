@@ -8,15 +8,13 @@ exports.dynaObjectScan = function (obj, cb, _parent, _propertyName, _path, _scan
         return;
     _scanned.push(obj);
     var skip = false;
-    if (_parent !== undefined) {
-        cb({
-            value: obj,
-            parent: _parent,
-            propertyName: _propertyName,
-            path: _path,
-            skip: function () { return skip = true; },
-        });
-    }
+    cb({
+        value: obj,
+        parent: _parent,
+        propertyName: _propertyName,
+        path: _path,
+        skip: function () { return skip = true; },
+    });
     if (skip)
         return;
     if (typeof obj === "object" && obj !== null) {
