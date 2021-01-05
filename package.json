@@ -1,6 +1,6 @@
 {
   "name": "dyna-object-scan",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Scan object deeply and safely",
   "repository": {
     "type": "git",
