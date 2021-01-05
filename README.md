@@ -25,7 +25,8 @@ dynaObjectScan(
     lname: 'Smith',
     cars: ['Honda', 'Porche'],
   },
-  ({path, value}) => {
+  ({path, value, parent}) => {
+    if (parent === undefined) return;
     console.log(path, value);
   },
 )
@@ -48,7 +49,8 @@ dynaObjectScan(
     lname: 'Smith',
     cars: ['Honda', 'Porche'],
   },
-  ({propertyName, value}) => {
+  ({propertyName, value, parent}) => {
+    if (parent === undefined) return;
     console.log(propertyName, value);
   },
 )
@@ -72,8 +74,9 @@ dynaObjectScan(
     lname: 'Smith',
     cars: ['Honda', 'Porche'],
   },
-  ({path, value, skip}) => {
-    if (path === '.cars') {
+  ({path, value, skip, parent}) => {
+      if (parent === undefined) return;
+      if (path === '.cars') {
       skip(); // This will block the scan of the root `cars` property.
       return;
     }
@@ -88,3 +91,11 @@ Consoles:
 .fname John
 .lname Smith
 ```
+
+# Change log
+
+## v2
+
+Version 2 scans and the root object. Version 1 didn't.
+
+To detect is the scanning object is the root one, the `parent === undefined`.

@@ -3,6 +3,17 @@
 exports[`dynaObjectScan Scan array 1`] = `
 Array [
   Object {
+    "path": "",
+    "value": Array [
+      "Apple",
+      "Banana",
+      Object {
+        "age": 32,
+        "name": "Lola",
+      },
+    ],
+  },
+  Object {
     "path": "[0]",
     "value": "Apple",
   },
@@ -30,6 +41,23 @@ Array [
 
 exports[`dynaObjectScan Scan object and skip 1`] = `
 Array [
+  Object {
+    "path": "",
+    "value": Object {
+      "age": 37,
+      "favoriteCars": Array [
+        "Honda",
+        "Porsche",
+      ],
+      "favoriteSweets": Object {
+        "kiwi": "maybe",
+        "panCakes": true,
+        "strawberries": false,
+      },
+      "fname": "John",
+      "lname": "Smith",
+    },
+  },
   Object {
     "path": ".fname",
     "value": "John",
@@ -62,6 +90,19 @@ Array [
 
 exports[`dynaObjectScan Scan object with nested objects 1`] = `
 Array [
+  Object {
+    "path": "",
+    "value": Object {
+      "age": 37,
+      "favoriteSweets": Object {
+        "kiwi": "maybe",
+        "panCakes": true,
+        "strawberries": false,
+      },
+      "fname": "John",
+      "lname": "Smith",
+    },
+  },
   Object {
     "path": ".fname",
     "value": "John",
@@ -99,6 +140,23 @@ Array [
 
 exports[`dynaObjectScan Scan object with nested objects and arrays 1`] = `
 Array [
+  Object {
+    "path": "",
+    "value": Object {
+      "age": 37,
+      "favoriteCars": Array [
+        "Honda",
+        "Porsche",
+      ],
+      "favoriteSweets": Object {
+        "kiwi": "maybe",
+        "panCakes": true,
+        "strawberries": false,
+      },
+      "fname": "John",
+      "lname": "Smith",
+    },
+  },
   Object {
     "path": ".fname",
     "value": "John",
@@ -151,6 +209,14 @@ Array [
 
 exports[`dynaObjectScan Scan simple object 1`] = `
 Array [
+  Object {
+    "path": "",
+    "value": Object {
+      "age": 37,
+      "fname": "John",
+      "lname": "Smith",
+    },
+  },
   Object {
     "path": ".fname",
     "value": "John",

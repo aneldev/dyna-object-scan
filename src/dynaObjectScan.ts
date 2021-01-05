@@ -17,15 +17,13 @@ export const dynaObjectScan = (
 
   let skip = false;
 
-  if (_parent !== undefined) {
-    cb({
-      value: obj,
-      parent: _parent,
-      propertyName: _propertyName,
-      path: _path,
-      skip: () => skip = true,
-    });
-  }
+  cb({
+    value: obj,
+    parent: _parent,
+    propertyName: _propertyName,
+    path: _path,
+    skip: () => skip = true,
+  });
 
   if (skip) return;
 
